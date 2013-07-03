@@ -17,7 +17,7 @@ module.exports = function(config) {
         $("." + data.role).fadeIn();
         var index = config.roles.indexOf(data.role);
 
-        config.roles.slice(index, index + 1);
+        config.roles.splice(index, 1);
         for (var i in config.roles) {
             $("." + config.roles[i]).remove();
         }
