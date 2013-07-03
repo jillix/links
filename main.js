@@ -10,8 +10,13 @@ module.exports = function(config) {
         $("." + config.roles[i]).hide();
     }
 
+    var cache;
+
     self.updateLinks = function (data) {
-        data = data || {};
+
+        cache = cache || data;
+        data = cache || {};
+
         data.role = data.role || config.publicRole;
 
         $("." + data.role).fadeIn();
