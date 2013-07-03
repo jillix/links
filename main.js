@@ -6,7 +6,9 @@ module.exports = function(config) {
     var self = this;
     Events.call(self, config);
 
-    self.updateLinks = function (a, b, c, d) {
-        debugger;
+    self.updateLinks = function () {
+        self.emit("getUserInfo", function (err, data) {
+            debugger;
+        });
     };
 };
