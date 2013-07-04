@@ -26,5 +26,8 @@ module.exports = function(config) {
         for (var i in config.roles) {
             $("." + config.roles[i]).remove();
         }
+
+        self.emit("updatedLinks", data);
     };
 };
+
