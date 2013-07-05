@@ -22,7 +22,10 @@ module.exports = function(config) {
         $("." + data.role).fadeIn();
         var index = config.roles.indexOf(data.role);
 
-        config.roles.splice(index, 1);
+        if (index !== -1) {
+            config.roles.splice(index, 1);
+        }
+
         for (var i in config.roles) {
             $("." + config.roles[i]).remove();
         }
@@ -30,4 +33,3 @@ module.exports = function(config) {
         self.emit("updatedLinks", data);
     };
 };
-
