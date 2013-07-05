@@ -27,7 +27,7 @@ module.exports = function(config) {
         }
 
         for (var i in config.roles) {
-            $("." + config.roles[i]).remove();
+            $("." + config.roles[i] + ":not('." + data.role + "')").remove();
         }
 
         self.emit("updatedLinks", data);
