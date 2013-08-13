@@ -32,4 +32,6 @@ module.exports = function(config) {
 
         self.emit("updatedLinks", data);
     };
+
+    self.emit("ready");
 };
