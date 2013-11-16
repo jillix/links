@@ -12,25 +12,25 @@ module.exports = function(config) {
 
     var cache;
 
-    self.updateLinks = function (data) {
+    self.updateLinks = function (userInfo) {
 
-        cache = cache || data;
-        data = cache || {};
+        cache = cache || userInfo;
+        var userData = cache || {};
 
-        data.role = data.role || config.publicRole;
+        userData.role = userData.role || config.publicRole;
 
-        $("." + data.role).fadeIn();
-        var index = config.roles.indexOf(data.role);
+        $("." + userData.role).show();
+        var index = config.roles.indexOf(userData.role);
 
-        if (index !== -1) {
+        if (userInfo && index !== -1) {
             config.roles.splice(index, 1);
         }
 
-        for (var i in config.roles) {
-            $("." + config.roles[i] + ":not('." + data.role + "')").remove();
+        for (var i = 0; i < config.roles.length; ++i) {
+            $("." + config.roles[i] + ":not('." + userData.role + "')").remove();
         }
 
-        self.emit("updatedLinks", data);
+        self.emit("updatedLinks", userData);
     };
 
     self.emit("ready");
