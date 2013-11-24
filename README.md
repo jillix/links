@@ -4,6 +4,9 @@ Mono module that will show/remove HTML elements using the login module data.
 
 # Changelog
 
+### v0.1.4
+ - Check if `userInfo` exists and only if it does remove the elements.
+
 ### v0.1.3
  - Use `config.options.prefix` to set the prefix of role class (default: `"role-"`);
  - Update to Bind v0.2.1 and Events v.0.1.7

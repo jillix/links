@@ -50,14 +50,16 @@ module.exports = function(config) {
         }
 
         // remove all elements that contain the roles and not the current role
-        for (var i = 0; i < config.roles.length; ++i) {
-            $(
-                "." +
-                getRoleWithPrefix.call(self, config.roles[i]) +
-                ":not('." +
-                getRoleWithPrefix.call(self, userData.role) +
-                "')"
-             ).remove();
+        if (userInfo) {
+            for (var i = 0; i < config.roles.length; ++i) {
+                $(
+                    "." +
+                    getRoleWithPrefix.call(self, config.roles[i]) +
+                    ":not('." +
+                    getRoleWithPrefix.call(self, userData.role) +
+                    "')"
+                 ).remove();
+            }
         }
 
         // emit 'updatedLinks' event
