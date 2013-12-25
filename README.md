@@ -4,6 +4,9 @@ Mono module that will show/remove HTML elements using the login module data.
 
 # Changelog
 
+### v0.1.5
+ - `Events v0.1.8`
+
 ### v0.1.4
  - Check if `userInfo` exists and only if it does remove the elements.
 
