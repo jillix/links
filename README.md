@@ -4,6 +4,9 @@ Mono module that will show/remove HTML elements using the login module data.
 
 # Changelog
 
+### v0.2.0
+ - Updated deps
+
 ### v0.1.5
  - `Events v0.1.8`
 
