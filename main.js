@@ -26,7 +26,7 @@ module.exports = function(config) {
      *  contain the userInfo sent by the Login module ('userInfo' event)
      *
      * */
-    self.updateLinks = function (userInfo) {
+    self.updateLinks = function(userInfo) {
 
         // create the ca cache
         self.cache = self.cache || userInfo;
@@ -58,7 +58,7 @@ module.exports = function(config) {
                     ":not('." +
                     getRoleWithPrefix.call(self, userData.role) +
                     "')"
-                 ).remove();
+                ).remove();
             }
         }
 
@@ -78,7 +78,7 @@ module.exports = function(config) {
  *  module configuration
  *
  * */
-function getRoleWithPrefix (role) {
+function getRoleWithPrefix(role) {
     return this.config.options.prefix + role;
 }
 
@@ -86,7 +86,7 @@ function getRoleWithPrefix (role) {
  * Process config function
  *
  * */
-function processConfig (config) {
+function processConfig(config) {
     config.options = config.options || {};
     config.options.prefix = config.options.prefix || "role-";
     config.roles = config.roles || [];

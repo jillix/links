@@ -4,6 +4,10 @@ Mono module that will show/remove HTML elements using the login module data.
 
 # Changelog
 
+### v0.2.1
+ - Minor syntax changes
+ - Updated to Bind v0.3.1
+
 ### v0.2.0
  - Updated deps
 
