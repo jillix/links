@@ -4,6 +4,10 @@ Mono module that will show/remove HTML elements using the login module data.
 
 # Changelog
 
+### v0.3.0
+ - transferred the module to the new jxMono organization
+ - updated Bind to `v0.4.0`, Events to `v0.4.0`
+
 ### v0.2.1
  - Minor syntax changes
  - Updated to Bind v0.3.1
